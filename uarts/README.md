@@ -1,6 +1,6 @@
 # uarts
 
-This program drives both UARTs on the Pico.
+[This program](https://github.com/piersfinlayson/pico-samples/tree/main/uarts) drives both UARTs on the Pico.
 * It uses UART1 as the USB serial port, rather than using the default of UART0, and using pins 4 and 5.
 * It uses UART0 as another UART.
 * 10 digits are transmitted on UART0, 1 per second. 
