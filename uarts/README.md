@@ -70,7 +70,7 @@ UART0: Received char: 8
 UART0: Received char: 9
 ```
 
-I assume the extraneous 'ÿ' is an artifact of booting with GP0 and GP1 connected.  I would guess that the Pico briefly pulls GP0 (UART0 TX) high when booting, which is received on GP1 (UART0 RX) andinterpreted as all 1s (0xff - ÿ).
+I assume the extraneous 'ÿ' is an artifact of booting with GP0 and GP1 connected.  I would guess that the Pico briefly pulls GP0 (UART0 TX) high when booting, which is received on GP1 (UART0 RX) and interpreted as all 1s (0xff - ÿ).
 
 ## UART pin mapping
 
