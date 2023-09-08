@@ -1,3 +1,4 @@
+# cmake
 CMakeLists.txt.user
 CMakeCache.txt
 CMakeFiles
@@ -9,7 +10,15 @@ install_manifest.txt
 compile_commands.json
 CTestTestfile.cmake
 _deps
+
+# Pico C SDK development
 pioasm
 pico-sdk
 elf2uf2
 generated
+*.dis
+*.hex
+*.bin
+*.elf
+*.elf.map
+*.uf2
