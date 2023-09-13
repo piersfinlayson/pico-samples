@@ -37,7 +37,7 @@ DMA: DMA transfer of 16384 32-bit values took 132us, CPU counted to: 2048
 DMA: memcpy of 65536 bytes took 479us, CPU didn't have time to count
 ```
 
-I make 132us to be 16,500 clock cycles (at 125MHz) which makes sense as the DMA transfer will take a minimum of 16,384 clock cycles (one cycle per byte), plus some overhead (not least because in dma_channel_configure some stuff is done before the DMA transfer is started).
+I make 132us to be 16,500 clock cycles (at 125MHz) which makes sense as the DMA transfer will take a minimum of 16,384 clock cycles (one cycle per 32-bit chunk), plus some overhead (not least because in dma_channel_configure some stuff is done before the DMA transfer is started).
 
 During 16,500 clock cycles, the CPU counts to 2048.  That's around 8 clock cycles per count.  The assembler the compiler is generating for this counting while loop is, I think:
 
