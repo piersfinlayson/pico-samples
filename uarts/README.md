@@ -17,9 +17,11 @@ The simplest way to test this is working is:
 
 ## Build
 
+From the root this is repo
+
 ```
 cmake .
-make -j 4
+make -j 4 uarts
 ```
 
 ## Install
@@ -27,7 +29,7 @@ make -j 4
 With your pico attached in BOOTSEL mode (as device sdx):
 
 ```
-./flash-pico.sh sdx uarts
+./flash-pico.sh sdx uarts/uarts.uf2
 ```
 
 ## Test

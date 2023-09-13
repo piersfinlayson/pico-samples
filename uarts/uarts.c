@@ -37,7 +37,7 @@
 
 int main()
 {
-    uint speed;
+    uint __attribute__((unused)) speed;
     int ii;
     char c;
 
@@ -55,9 +55,10 @@ int main()
     printf("USB serial: initialized\n");
 
     // Initialize UART0, which we'll use to send/transmit data
-    speed = uart_init(uart0, 115200);
+    speed = uart_init(uart0, 2400);
     gpio_set_function(0, GPIO_FUNC_UART);
     gpio_set_function(1, GPIO_FUNC_UART);
+    uart_set_format(uart0, 8, 1, UART_PARITY_EVEN);
     printf("UART0: initialized\n");
 
     // Do the contents of this while loop forever
@@ -70,7 +71,6 @@ int main()
             sleep_ms(1000);
             printf("UART0: Send char: %c\n", c);
             uart_putc(uart0, c);
-
         }
 
         // Now read whatever data we have already receivedor receive over the next 10 seconds
